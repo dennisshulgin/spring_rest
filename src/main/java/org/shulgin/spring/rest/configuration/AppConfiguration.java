@@ -44,6 +44,7 @@ public class AppConfiguration {
         return localSessionFactoryBean;
     }
 
+    @Bean
     public HibernateTransactionManager transactionManager() {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(sessionFactory().getObject());
